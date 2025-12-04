@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --color-primary: #f98e2b;
+  --color-secondary: #f3f3f3;
+  /* configuracion de container */
+  --container-center: true;
+  --container-padding-DEFAULT: 1rem;
+  --container-padding-md: 2rem;
+}
+@utility container {
+  @apply m-auto p-4 md:p-12;
+}
+@layer components {
+  .primary-btn {
+    @apply bg-primary hover:bg-primary/80 my-3 cursor-pointer rounded-lg px-4 py-2 text-white shadow;
+  }
+  .outline-btn {
+    @apply ring-primary text-primary hover:bg-primary inset-0 my-3 cursor-pointer rounded-lg px-4 py-2 ring-2 hover:text-white;
+  }
+}
