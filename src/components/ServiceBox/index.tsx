@@ -44,7 +44,7 @@ const ServiceBox = () => {
   return (
     <section id="services" className="container my-10">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-        {services.map(({ id, bgColor, description, icon, image, title }) => (
+        {services.map(({ id, bgColor, description, icon, title }) => (
           <div
             key={id}
             // style={{ backgroundImage: `url(${image})` }}
