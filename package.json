@@ -6,11 +6,10 @@
   "homepage": "https://github.com/cruzrovira/werb-porfolio",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "rm -rf dist && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "pnpm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.1.17",
