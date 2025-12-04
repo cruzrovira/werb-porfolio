@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Portafolio Personal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un portafolio personal moderno y responsivo, diseñado para mostrar mis habilidades y proyectos. Construido con las últimas tecnologías web para una experiencia de usuario fluida y visualmente atractiva.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Diseño Responsivo:** Adaptable a diferentes tamaños de pantalla (móvil, tablet, escritorio).
+- **Componentes Modulares:** Estructura de componentes reutilizables para facilitar el desarrollo y mantenimiento.
+- **Secciones Clave:** Incluye secciones como Hero, Acerca de, Habilidades, Servicios y Contacto.
+- **Iconografía Profesional:** Utiliza `react-icons` para una amplia gama de iconos escalables.
 
-## React Compiler
+## Tecnologías Utilizadas
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **React 19:** Una biblioteca de JavaScript para construir interfaces de usuario interactivas.
+- **Vite 7:** Un entorno de desarrollo frontend de nueva generación que ofrece una experiencia de desarrollo extremadamente rápida.
+- **TypeScript:** Un superconjunto tipado de JavaScript que mejora la calidad del código y la productividad.
+- **Tailwind CSS 4:** Un framework CSS utility-first para construir diseños personalizados de forma rápida.
+- **React Icons:** Una librería que proporciona iconos populares de alta calidad.
+- **ESLint y Prettier:** Herramientas para mantener la consistencia del código y aplicar las mejores prácticas.
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  Clona el repositorio:
+    ```bash
+    git clone https://github.com/cruzrovira/werb-porfolio.git
+    cd porfolio
+    ```
+2.  Instala las dependencias:
+    ```bash
+    pnpm install
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Uso
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Modo de Desarrollo
+
+Para iniciar el servidor de desarrollo y ver el proyecto en tu navegador:
+
+```bash
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+El proyecto estará disponible en `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Construir para Producción
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Para construir la aplicación para despliegue en producción:
+
+```bash
+pnpm build
 ```
+
+Los archivos de la compilación se generarán en el directorio `dist/`.
+
+## Scripts Disponibles
+
+En el directorio del proyecto, puedes ejecutar:
+
+- `pnpm dev`: Inicia el servidor de desarrollo.
+- `pnpm build`: Compila la aplicación para producción.
+- `pnpm lint`: Ejecuta ESLint para identificar problemas de código.
+- `pnpm preview`: Sirve la compilación de producción localmente.
+
+---
